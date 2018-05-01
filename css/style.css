@@ -1,14 +1,3 @@
-/*
-Project Name: Blank Template
-Client: Your Client
-Author: Your Name
-Developer @GA in NYC
-*/
-
-/******************************************
-/* SETUP
-/*******************************************/
-
 /* Box Model Hack */
 * {
   -moz-box-sizing: border-box; /* Firexfox */
@@ -16,29 +5,7 @@ Developer @GA in NYC
   box-sizing: border-box; /* IE */
 }
 
-/* Clear fix hack */
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
 
-.clear {
-  clear: both;
-}
-
-.alignright {
-  float: right;
-  padding: 0 0 10px 10px; /* note the padding around a right floated image */
-}
-
-.alignleft {
-  float: left;
-  padding: 0 10px 10px 0; /* note the padding around a left floated image */
-}
 
 /******************************************
 /* BASE STYLES
@@ -49,32 +16,47 @@ body {
   font-size: 26px;
   line-height: 1.4;
   color: #606161;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 300;
 }
-a {
-  text-decoration: none;
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: blue;
 }
-
+.cosmo1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  opacity: .8;
+}
+.cosmo2 {
+  position: absolute;
+  top: -22%;
+  left: -22%;
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
 
 /* Center the container */
+
 #container {
   width: 100%;
   margin: 0 auto;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 #logo {
-display: block;
-height: 30%;
-width: 20%;
-margin-left:80px;
-padding:0,auto;
+  display: block;
+  height: 30%;
+  width: 20%;
+  margin-left: 80px;
+  padding: 0, auto;
 }
 
 header {
@@ -82,17 +64,14 @@ header {
   padding: 25px 0;
   overflow: hidden;
   height: 100px;
+  width: 100%;
 }
 
-
-
 header nav {
-
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   margin-top: 13px;
-  margin-right:30px;
-
+  margin-right: 30px;
 }
 header nav ul li {
   display: inline-block;
@@ -101,306 +80,313 @@ header nav ul li {
   font-weight: 600;
 }
 header nav ul li a {
-  color: #202F7A;
+  color: #202f7a;
 }
 
-    
-    .mySlides {display: none}
-    img {vertical-align: middle;}
-    div .mySlides img{width: 100%}
-    
-    /* Slideshow container */
-    .slideshow-container {
-      width:100%;
-      position: relative;
-      overflow: hidden;
-      height: 500px;
-      margin: 0,auto;
-    }
-    
-    /* Next & previous buttons */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-    }
-    
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
-    
-    
-
-    
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-    
-    /* The dots/bullets/indicators */
-    
-    
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
+.carousel-item {
+  height: 500px;
+  width: 100%;
+}
+#top-btn {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+.top-btn {
+  width: 150px;
+  background-color: #202f7a;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  margin: 30px;
+  padding: 15px 32px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-    
-    /* Fading animation */
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 1.5s;
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-    
-    @-webkit-keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-    
-    @keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-    #top-btn{
-      display: flex;
-      justify-content: center;
-      justify-content: space-around;
-    }
-   .top-btn{
-    width: 150px;
-    background-color: #202F7A;
-    border-radius: 8px;
-    border: none;
-    color: white;
-    margin: 30px;
-    padding: 15px 32px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  font-size: 16px;
 }
 .top-btn:hover {
-  background-color: #F08523;
+  background-color: #f08523;
   color: white;
 }
 
-.row{margin-top:20px;
-
+.row {
+  margin-top: 20px;
 }
-.container{
-  margin-top:80px;
+.container {
+  margin-top: 80px;
   margin-bottom: 100px;
 }
-#contianer-p{
-  font-family:'Bungee', cursive;
+#contianer-p {
+  font-family: "Bungee", cursive;
   font-size: 30px;
-  
-  border-top:3px solid;
-  border-bottom :3px solid;
-  border-top-color:  #202F7A;
-  border-bottom-color:  #202F7A;
-}
-#intro{ 
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 18px;
 
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  border-top-color: #202f7a;
+  border-bottom-color: #202f7a;
 }
-#intro-btn{ 
+#intro {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+}
+#intro-btn {
   width: 120px;
-  background-color: #F08523;
+  background: linear-gradient(to right, #ea5514, #f8b62d);
   border-radius: 8px;
   border: none;
   color: white;
   padding: 14px 28px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;}
+  font-size: 16px;
+}
 
-  #intro-btn:hover {
-    background-color: #202F7A;
-    color: white;
-  }
+#intro-btn:hover {
+  background-color: #202f7a;
+  color: white;
+}
 
-h1{
-margin:150px}
+h1 {
+  margin: 150px;
+}
 
-#container-events{
+#container-events {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-top:30px;
+  margin-top: 30px;
 }
-#event1{
- background-image: url("../images/homepage 1.jpg");
- background-size: 150% ;
- width: 550px;
- height: 500px;
-margin-left:150px;
-}
-
-#event-box{
-width: 440px;
- height: 400px;
- margin-left:30px;
+#event1 {
+  background-image: url("../images/homepage 1.jpg");
+  background-size: 150%;
+  width: 550px;
+  height: 500px;
+  margin-left: 150px;
 }
 
-div h2{
-  font-family:'Bungee';
+#event-box {
+  width: 440px;
+  height: 400px;
+  margin-left: 30px;
+}
+
+div h2 {
+  font-family: "Bungee";
   font-size: 30px;
   margin-bottom: 30px;
 }
 
-div #eventtime1{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size:28px;
-  width:150px;
+div #eventtime1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 28px;
+  width: 150px;
   margin-bottom: 30px;
 }
 
-#eventdiscribe{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size:18px;
-  margin-bottom: 30px;}
-  
-  
+#eventdiscribe {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
 
-    
-  
-  
-  
-  #container-events1{
-      display: flex;
-      flex-direction: row;
-      margin-top: 30px
-      
-      
-     
-    }
-    
-    
-    #event-box1{
-    width: 300px;
-     height: 200px;
-     margin-left:150px;
-     margin-right:20px
-    }
-    
-    div h3{
-      font-family:'Bungee';
-      font-size: 30px;
-      margin-bottom: 30px;
-      
-    }
-    
-    div #eventtime2{
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-size:28px;
-      width:150px;
-      margin-bottom: 20px;
-    }
-    
-    #eventdiscribe1{
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-size:18px;
-      margin-bottom: 30px;
-    }
-    #event2{
-      background-image: url("../images/light women.jpg");
-      background-size: 100% ;
-      width: 600px;
-      height: 370px;
-    
-     }
+#container-events1 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
 
-     #container-events2{
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      margin-top:30px;
-      
-    }
-    #event3{
-     background-image: url("../images/wine .jpg");
-     background-size: 150% ;
-     width: 400px;
-     height: 400px;
-    margin-left:150px;
-    }
-    
-    #event-box2{
-    width: 550px;
-     height: 400px;
-     margin-left:30px;
-    }
-    
-    div h4{
-      font-family:'Bungee';
-      font-size: 30px;
-      margin-bottom: 30px;
-    }
-    
-    div #eventtime3{
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-size:28px;
-      width:150px;
-      margin-bottom: 30px;
-    }
-    
-    #eventdiscribe2{
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-size:18px;
-      margin-bottom: 30px;}
+#event-box1 {
+  width: 300px;
+  height: 200px;
+  margin-left: 150px;
+  margin-right: 20px;
+}
 
+div h3 {
+  font-family: "Bungee";
+  font-size: 30px;
+  margin-bottom: 30px;
+}
 
+div #eventtime2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 28px;
+  width: 150px;
+  margin-bottom: 20px;
+}
 
+#eventdiscribe1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+#event2 {
+  background-image: url("../images/light women.jpg");
+  background-size: 100%;
+  width: 600px;
+  height: 370px;
+}
 
-.bookingtickets{
+#container-events2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+#event3 {
+  background-image: url("../images/wine .jpg");
+  background-size: 150%;
+  width: 400px;
+  height: 400px;
+  margin-left: 150px;
+}
+
+#event-box2 {
+  width: 550px;
+  height: 400px;
+  margin-left: 30px;
+}
+
+div h4 {
+  font-family: "Bungee";
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+div #eventtime3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 28px;
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+#eventdiscribe2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.bookingtickets {
   width: 180px;
-  background-color: #F08523;
+  background-color: #f08523;
   border-radius: 8px;
   border: none;
   color: white;
   padding: 14px 28px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;}
+  font-size: 16px;
+}
 
-  .bookingtickets:hover {
-    background-color: #202F7A;
-    color: white;
-  }
+.bookingtickets:hover {
+  background-color: #202f7a;
+  color: white;
+}
+
+.subnav {
+  display: flex;
+  justify-content: flex-start;
+
+  margin-top: 13px;
+  margin-left: 120px;
+}
+.return {
+  font-size: 17px;
+  color: #202f7a;
+  padding-right: 15px;
+  font-weight: 500;
+}
+.current {
+  font-size: 17px;
+  color: #f08523;
+  border-left: #f08523 solid 3px;
+  padding-left: 15px;
+  font-weight: 500;
+}
+
+#footer {
+  height: 200px;
+  width: 100%;
+  background-color: #202f7a;
+  margin-top: 30px;
+}
+
+div h5 {
+  font-family: "Bungee", cursive;
+  font-size: 30px;
+  margin-left: 120px;
+  margin-top: 20px;
+}
+#box1,
+#box2,
+#box3 {
+}
+#box2,
+#box3 {
+  margin-top: 20px;
+}
+
+#eventpic1 {
+  background-image: url("../images/event1.jpg");
+  background-size: 100%;
+  width: 100%;
+  height: 300px;
+}
+
+#eventinfo {
+  height: 100px;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: "Bungee", cursive;
+}
+.evevtinfo {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  margin-top: -15px;
+}
+.eventdate {
+  text-align: center;
+  margin-top: 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  color: #f08523;
+  margin-top: -10px;
+}
+
+#eventpic2 {
+  background-image: url("../images/tea.jpg");
+  height: 300px;
+}
+#eventpic3 {
+  background-image: url("../images/handmade.jpg");
+  background-size: 138%;
+  height: 300px;
+}
+#eventpic4 {
+  background-image: url("../images/art.jpg");
+  background-size: 100%;
+  height: 300px;
+}
+#eventpic5 {
+  background-image: url("../images/band.jpg");
+  background-size: 105%;
+  height: 300px;
+}
+#eventpic6 {
+  background-image: url("../images/barbecue-07-3.jpg");
+  background-size: 120%;
+  height: 300px;
+}
+
