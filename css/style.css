@@ -1,3 +1,7 @@
+
+
+
+
 /* Box Model Hack */
 * {
   -moz-box-sizing: border-box; /* Firexfox */
@@ -20,22 +24,28 @@ body {
   font-weight: 300;
 }
 .star {
+  
   position: absolute;
   width: 2px;
   height: 2px;
   border-radius: 50%;
-  background: blue;
+  background: #202f7a;
+  
 }
 .cosmo1 {
-  position: absolute;
-  top: -10%;
-  left: -10%;
+  display: block;
+  position: relative;
   opacity: .8;
+  z-index:-1;
+
 }
 .cosmo2 {
-  position: absolute;
-  top: -22%;
-  left: -22%;
+ display: block;
+ position: relative;
+  width: 100%;
+  
+  z-index:-1;
+  
 }
 /******************************************
 /* LAYOUT
@@ -288,7 +298,6 @@ div #eventtime3 {
   background-color: #202f7a;
   color: white;
 }
-
 .subnav {
   display: flex;
   justify-content: flex-start;
@@ -323,13 +332,17 @@ div h5 {
   margin-left: 120px;
   margin-top: 20px;
 }
-#box1,
-#box2,
-#box3 {
+div #box1,#box2,#box3,#box4,#box5,#box6,#box7 { 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
 }
-#box2,
-#box3 {
-  margin-top: 20px;
+
+#box2,#box3,#box3,#box4,#box5,#box6,#box7{
+  margin-top: 15px;
+}
+#box2,#box4{margin-right:9px;}
+#box6{margin-left:74px;
+
 }
 
 #eventpic1 {
@@ -389,4 +402,6 @@ div h5 {
   background-size: 120%;
   height: 300px;
 }
+
+
 
